@@ -1185,6 +1185,8 @@ wp.date.setSettings( {"l10n":{"locale":"en_US","months":["January","February","M
 <script type="text/javascript" src="./demo_files/redux-routine.min.js.download" id="wp-redux-routine-js"></script>
 <script type="text/javascript" src="./demo_files/data.min.js.download" id="wp-data-js"></script>
 <script type="text/javascript" id="wp-data-js-after">
+
+	
 /* <![CDATA[ */
 ( function() {
 	var userId = 1;
@@ -1272,54 +1274,4 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 
 
-<p id="a11y-speak-intro-text" class="a11y-speak-intro-text" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" hidden="">Notifications</p><div id="a11y-speak-assertive" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div><div id="a11y-speak-polite" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="polite" aria-relevant="additions text" aria-atomic="true"></div><div class="widget_shopping_cart_live_region screen-reader-text" role="status"></div>
-
-<script>
-// Trigger animations on scroll
-document.addEventListener('DOMContentLoaded', function() {
-    // Activate pulse animation immediately
-    const pulseElements = document.querySelectorAll('.pulse, [data-settings*="pulse"]');
-    pulseElements.forEach(el => {
-        el.classList.add('animated');
-    });
-    
-    // Set up intersection observer for scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animated');
-                // Add floating animation to images
-                if (entry.target.classList.contains('elementor-animation-float')) {
-                    entry.target.style.animation = 'float 3s ease-in-out infinite';
-                }
-            }
-        });
-    }, observerOptions);
-    
-    // Observe elements with animation classes
-    const animatedElements = document.querySelectorAll('.slideInRight, .slideInLeft, .slideInUp, .rotateInDownLeft, .elementor-animation-float, [data-settings*="animation"]');
-    animatedElements.forEach(el => observer.observe(el));
-    
-    // Ensure lazyloaded elements are visible
-    document.querySelectorAll('.e-lazyloaded').forEach(el => {
-        el.style.opacity = '1';
-    });
-});
-
-// Add floating animation keyframes
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
-    }
-`;
-document.head.appendChild(style);
-</script>
-
-</body></html>
+<p id="a11y-speak-intro-text" class="a11y-speak-intro-text" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" hidden="">Notifications</p><div id="a11y-speak-assertive" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div><div id="a11y-speak-polite" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="polite" aria-relevant="additions text" aria-atomic="true"></div><div class="widget_shopping_cart_live_region screen-reader-text" role="status"></div></body></html>
